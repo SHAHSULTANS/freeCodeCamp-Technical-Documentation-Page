@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Documentation Page</title>
+    <link rel="stylesheet" href="src/styles.css">
+</head>
+<body>
+
+    <nav id="navbar">
+        <header>Learn English</header>
+        <a href="#introduction" class="nav-link">Introduction</a>
+        <a href="#What_You_Should_Already_Know" class="nav-link">What You Should Already Know</a>
+        <a href="#Vocabulary" class="nav-link">Vocabulary</a>
+        <a href="#Grammar" class="nav-link">Grammar</a>
+        <a href="#Tenses" class="nav-link">Tenses</a>
+    </nav>
+
+    <main id="main-doc">
+
+        <section class="main-section" id="introduction">
+            <header>Introduction</header>
+            <p>English is a global language used for communication in various fields, including business, education, and technology. It is widely spoken and understood across continents. English learning encompasses the study of vocabulary, grammar, and pronunciation to build speaking, listening, reading, and writing skills</p>
+
+            <p>English has a large set of words (lexicon), grammatical structures, and a phonetic system that can be mastered gradually. By understanding the rules and structures of English, learners can communicate effectively in diverse contexts.</p>
+            
+            <code>Welcome to your english journey.</code>
+            <ul>
+                <li>Introduction to the concepts</li>
+                <li>Goals and objectives</li>
+            </ul>
+        </section>
+
+        <section class="main-section" id="What_You_Should_Already_Know">
+            <header>What You Should Already Know</header>
+            
+            <ul>
+                <li>A general understanding of your native language grammar.</li>
+                <li>Familiarity with reading and writing in your language</li>
+                <li>A desire to practice and improve your communication skills in English.</li>
+            </ul>
+        </section>
+
+        <section class="main-section" id="Vocabulary">
+            <header>Vocabulary</header>
+            <p>Vocabulary is the set of words used in a language. Learning new words and their meanings is foundational to mastering English. Vocabulary consists of nouns, verbs, adjectives, adverbs, and more</p>
+            <ul>
+                <li>Noun: Represents a person, place, thing, or idea.
+                    <code>Example: table, happiness, city.</code>
+                </li>
+                <li>Verb: Represents an action or state.
+                    <code>Example: run, be, have.</code>
+                </li>
+                <li>Adjective: Describes a noun.
+                    <code>Example: happy, quick, bright.</code>
+                </li>
+                <li>Adverb: Modifies a verb, adjective, or other adverbs.
+                    <code>Example: quickly, very, silently.</code>
+                </li>
+            </ul>
+            
+        </section>
+
+        <section class="main-section" id="Grammar">
+            <header>Grammar</header>
+            <p>Grammar provides the structure and rules for combining words in a meaningful way. English grammar includes parts of speech, sentence structure, and verb tenses.</p>
+            <ul>
+                <li>In English, sentences usually follow the Subject-Verb-Object (SVO) structure
+                    <code>Example: She (subject) writes (verb) an email (object).</code>
+                </li>
+            </ul>
+        </section>
+
+        <section class="main-section" id="Tenses">
+            <header>Tenses</header>
+            <p>Tenses convey the timing of an action or state. There are three main tenses in English</p>
+            <ul>
+                <ul>
+                    <li>Present: Describes actions happening now or regularly.
+                        <code>Example: I study every day.</code>
+                    </li>
+                    <li>Past: Describes actions that happened in the past.
+                        <code>Example: I studied yesterday.</code>
+                    </li>
+                    <li>Future: Describes actions that will happen.
+                        <code>Example: I will study tomorrow.</code>
+                    </li>
+                </ul>
+                
+            </ul>
+
+            <p></p> <p></p>
+            <p></p> <p></p>
+            <p></p> <p></p>
+        </section> 
+
+    </main> 
+
+    <div class="footer">
+        <div class="footer-content">
+            <img src="https://github.com/SHAHSULTANS/Picture/raw/main/mylogo2.png" alt="" class="footer-img">
+            <div class="footer-text">
+                &copy; <span id="year"></span>
+                <span id="username">Shanto.</span> All rights reserved.
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script>
+        let activeNav=document.querySelector(".nav-link");
+        activeNav.classList.add("active");
+
+        window.onclick=()=>{
+            //console.log(event.target.className);
+            if(event.target.className=='nav-link' && activeNav){
+                activeNav.classList.remove("active");
+                activeNav=event.target;
+
+                activeNav.classList.add("active");
+            }
+            console.log(activeNav);
+        }
+
+
+
+        document.getElementById("year").textContent=new Date().getFullYear();
+
+    </script>
+
+</body>
+</html>
